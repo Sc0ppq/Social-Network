@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.beginsecure.application_good.controller.FriendRequestsController">
+    <top>
+        <Label text="Friend Requests" style="-fx-font-size: 18;" alignment="CENTER" />
+    </top>
+    <center>
+        <ListView fx:id="friendRequestsList" />
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <Button  fx:id="closeButton" text="Close" onAction="#handleClose" />
+        </HBox>
+    </bottom>
+</BorderPane>
