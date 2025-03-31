@@ -1,0 +1,71 @@
+
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f9f9f9;
+}
+
+Label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+TextField {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5 10;
+    -fx-font-size: 12px;
+}
+
+Button {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 5 15;
+}
+
+Button:hover {
+    -fx-background-color: #45a049;
+}
+
+Button:pressed {
+    -fx-background-color: #388e3c;
+}
+
+TableView {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5;
+}
+
+TableColumn {
+    -fx-text-fill: #444;
+    -fx-font-size: 12px;
+}
+
+VBox {
+    -fx-spacing: 15px;
+    -fx-padding: 15px;
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 10px;
+}
+
+HBox {
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.dialog-pane {
+    -fx-font-size: 12px;
+    -fx-background-color: #ffffff;
+}
+
+.alert {
+    -fx-font-weight: bold;
+    -fx-text-fill: #e53935;
+}

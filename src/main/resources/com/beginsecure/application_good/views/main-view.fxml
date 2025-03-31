@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.beginsecure.application_good.controller.MainWindowController">
+
+    <!-- Partea de sus: Formularul de login -->
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Login" />
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="firstNameField" promptText="First Name" />
+                <TextField fx:id="lastNameField" promptText="Last Name" />
+                <Button text="Submit" onAction="#handleLogin" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Partea de jos -->
+    <center>
+        <VBox spacing="20">
+            <!-- Lista prietenilor si utilizatorilor -->
+            <HBox spacing="10" alignment="CENTER">
+                <VBox spacing="10">
+                    <Label text="Your Friends" />
+                    <TableView fx:id="friendsTable">
+                        <columns>
+                            <TableColumn fx:id="friendFirstNameCol" text="First Name" />
+                            <TableColumn fx:id="friendLastNameCol" text="Last Name" />
+                        </columns>
+                    </TableView>
+
+                    <!-- Zona pentru navigarea intre pagini -->
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button fx:id="prevPageButton" text="Previous" onAction="#handlePrevPage" />
+                        <Label fx:id="pageInfoLabel" text="Page 1 of 1" />
+                        <Button fx:id="nextPageButton" text="Next" onAction="#handleNextPage" />
+                    </HBox>
+
+                    <Button text="Delete" onAction="#handleDeleteFriend" />
+                </VBox>
+
+
+                <VBox spacing="10">
+                    <Label text="Find Users" />
+                    <HBox spacing="10">
+                        <TextField fx:id="searchField" promptText="Search by name" />
+                        <Button text="Search" onAction="#handleSearch" />
+                    </HBox>
+                    <TableView fx:id="allUsersTable">
+                        <columns>
+                            <TableColumn fx:id="userFirstNameCol" text="First Name" />
+                            <TableColumn fx:id="userLastNameCol" text="Last Name" />
+                        </columns>
+                    </TableView>
+                    <Button text="New Friend" onAction="#handleNewFriend" />
+                </VBox>
+
+            </HBox>
+
+            <!-- Buton pentru cererile de prietenie -->
+            <Button text="Show Friend Requests" onAction="#handleShowFriendRequests" alignment="CENTER" />
+            <Button fx:id="chatButton" text="Chat" onAction="#openChatWindow" />
+        </VBox>
+    </center>
+</BorderPane>
